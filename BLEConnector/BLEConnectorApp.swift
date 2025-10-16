@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct BLEConnectorApp: App {
+    @StateObject private var viewModel = BluetoothViewModel()
     @State private var isLoading = true
     
     var body: some Scene {
@@ -18,7 +19,7 @@ struct BLEConnectorApp: App {
                     isLoading = false
                 }
             } else {
-                ContentView()
+                ContentView(viewModel: viewModel)
             }
         }
     }
