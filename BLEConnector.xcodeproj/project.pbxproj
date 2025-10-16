@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D268E7CAE18915BCCDD0C662 /* Pods_BLEConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA0F570057DDC40E7458B4D /* Pods_BLEConnector.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		21CFFC3270642E2336638681 /* Pods-BLEConnector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEConnector.debug.xcconfig"; path = "Target Support Files/Pods-BLEConnector/Pods-BLEConnector.debug.xcconfig"; sourceTree = "<group>"; };
+		51DBB5D2F04760A8A848FACB /* Pods-BLEConnector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEConnector.release.xcconfig"; path = "Target Support Files/Pods-BLEConnector/Pods-BLEConnector.release.xcconfig"; sourceTree = "<group>"; };
+		BFA0F570057DDC40E7458B4D /* Pods_BLEConnector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEConnector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D714D4882EA0E86600958A34 /* BLEConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -23,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D268E7CAE18915BCCDD0C662 /* Pods_BLEConnector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD85A59ECF20C29BB452A50B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21CFFC3270642E2336638681 /* Pods-BLEConnector.debug.xcconfig */,
+				51DBB5D2F04760A8A848FACB /* Pods-BLEConnector.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C12BA19A23FCCE2EFAF2BB07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFA0F570057DDC40E7458B4D /* Pods_BLEConnector.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D714D47F2EA0E86600958A34 = {
 			isa = PBXGroup;
 			children = (
 				D714D48A2EA0E86600958A34 /* BLEConnector */,
 				D714D4892EA0E86600958A34 /* Products */,
+				AD85A59ECF20C29BB452A50B /* Pods */,
+				C12BA19A23FCCE2EFAF2BB07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +79,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D714D4932EA0E86D00958A34 /* Build configuration list for PBXNativeTarget "BLEConnector" */;
 			buildPhases = (
+				7B3300E21FE7F2B961BDB39D /* [CP] Check Pods Manifest.lock */,
 				D714D4842EA0E86600958A34 /* Sources */,
 				D714D4852EA0E86600958A34 /* Frameworks */,
 				D714D4862EA0E86600958A34 /* Resources */,
@@ -64,8 +92,6 @@
 				D714D48A2EA0E86600958A34 /* BLEConnector */,
 			);
 			name = BLEConnector;
-			packageProductDependencies = (
-			);
 			productName = BLEConnector;
 			productReference = D714D4882EA0E86600958A34 /* BLEConnector.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B3300E21FE7F2B961BDB39D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BLEConnector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D714D4842EA0E86600958A34 /* Sources */ = {
@@ -246,6 +297,7 @@
 		};
 		D714D4942EA0E86D00958A34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21CFFC3270642E2336638681 /* Pods-BLEConnector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -258,6 +310,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -277,6 +330,7 @@
 		};
 		D714D4952EA0E86D00958A34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51DBB5D2F04760A8A848FACB /* Pods-BLEConnector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
