@@ -9,13 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Button("Scan for devices") {
+                    // TODO: - Add action
+                }
+                .padding()
+                
+                List {
+                    Section(header: Text("Found devices")) {
+                        // TODO: - Add a list of devices
+                    }
+                }
+                .listStyle(GroupedListStyle())
+            }
+            .navigationTitle("BLE devices")
         }
-        .padding()
     }
 }
 
