@@ -131,6 +131,10 @@ extension BluetoothViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
             }
         }
     }
+    
+    func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {
+        peripheral.discoverServices(nil)
+    }
 
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         connectedPeripheral = nil
