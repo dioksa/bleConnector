@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct BLEConnectorApp: App {
+    @State private var isLoading = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isLoading {
+                SplashScreenView {
+                    isLoading = false
+                }
+            } else {
+                ContentView()
+            }
         }
     }
 }
